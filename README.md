@@ -1,4 +1,4 @@
-# React + Vite Tutorial
+# React Tutorial
 
 ### TMDB 영화
 TMDB : https://www.themoviedb.org/
