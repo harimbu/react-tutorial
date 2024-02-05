@@ -11,6 +11,8 @@ export default function Header() {
         <ul>
           <li><Link to='/movie'>Movies</Link></li>
           <li><Link to='/todo'>Todo-list</Link></li>
+          <li><Link to='/fire'>Firebase todo</Link></li>
+          <li><Link to='/weather'>Weather</Link></li>
           <li><Link to='/tutorial'>Tutorial</Link></li>
         </ul>
       </nav>
