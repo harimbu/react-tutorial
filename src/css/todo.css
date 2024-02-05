@@ -1,0 +1,59 @@
+button {
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #666;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.todos {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.todos h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.todos form input {
+  width: 100%;
+  padding: 12px;
+  font-size: 20px;
+  border: 1px solid #999;
+}
+
+.todo_list {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo_item {
+  display: flex;
+  gap: 10px;
+  padding: 16px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.todo__text {
+  display: flex;
+  gap: 10px;
+}
+
+.todo__text .done {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo__control {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
