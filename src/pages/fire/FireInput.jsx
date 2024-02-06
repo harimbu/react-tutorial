@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { db } from "../../../firebase";
+import { db } from "../../config/firebase"
 import { collection, serverTimestamp, doc, setDoc } from "firebase/firestore"; 
 
 export default function FireInput() {

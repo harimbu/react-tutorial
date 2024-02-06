@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import FireItem from "./FireItem"
-import { db } from "../../../firebase";
+import { db } from "../../config/firebase"
 import { collection, query, where, onSnapshot } from "firebase/firestore";
 
 export default function FireList() {

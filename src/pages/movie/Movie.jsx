@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Layout from "../../layout/Layout";
 import { Link } from "react-router-dom";
 import '../../css/movie.css'
 
@@ -24,22 +23,20 @@ export default function Movie() {
   }, [])
 
   return (
-    <Layout>
-      <ul className="movie_list">
-        {movies.map(movie => 
-          <Link key={movie.id} to={'/movie/' + movie.id} state={movie}>
-            <li>
-              <div className="movie_thumbnail">
-                <img src={BASIC_URL + movie.poster_path} alt="" />
-              </div>
-              <div className="movie_title">
-                <h4>{movie.title}</h4>
-                <p>평점 : {movie.vote_average}</p>
-              </div>
-            </li>
-          </Link>
-        )}
-      </ul>
-    </Layout>
+    <ul className="movie_list">
+      {movies.map(movie => 
+        <Link key={movie.id} to={'/movie/' + movie.id} state={movie}>
+          <li>
+            <div className="movie_thumbnail">
+              <img src={BASIC_URL + movie.poster_path} alt="" />
+            </div>
+            <div className="movie_title">
+              <h4>{movie.title}</h4>
+              <p>평점 : {movie.vote_average}</p>
+            </div>
+          </li>
+        </Link>
+      )}
+    </ul>
   )
 }

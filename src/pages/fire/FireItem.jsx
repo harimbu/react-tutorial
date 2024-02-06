@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { db } from "../../../firebase"
+import { db } from "../../config/firebase"
 import { doc, deleteDoc, updateDoc} from "firebase/firestore";
 
 export default function FireItem({todo}) {
