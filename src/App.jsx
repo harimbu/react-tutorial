@@ -10,6 +10,8 @@ import Tutorial from './pages/tutorial/Tutorial';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Supa from './pages/supa/Supa';
+import SupaWrite from './pages/supa/SupaWrite';
+import SupaEdit from './pages/supa/SupaEdit';
 
 export default function App() {
 
@@ -25,6 +27,8 @@ export default function App() {
           <Route path='/todo' element={<Todo /> } />
           <Route path='/fire' element={<Fire /> } />
           <Route path='/supa' element={<Supa /> } />
+          <Route path='/supawrite' element={<SupaWrite /> } />
+          <Route path='/supaedit' element={<SupaEdit /> } />
           <Route path='/weather' element={<Weather /> } />
           <Route path='/tutorial' element={<Tutorial /> } />
         </Routes>
