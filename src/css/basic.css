@@ -1,0 +1,9 @@
+.component_box {
+  border: 2px solid #000;
+  padding: 30px;
+  margin: 10px 0;
+}
+
+.component_box h3 {
+  color: orangered;
+}
