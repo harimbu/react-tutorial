@@ -2,38 +2,51 @@ import { useEffect, useState } from 'react'
 import '../../css/weather.css'
 
 export default function Weather() {
-  const [item, setItem] = useState({})
+  const [weatherData, setWeatherData] = useState({})
+  const [city, setCity] = useState('')
 
-  const KEY = 'a5819ac017fa9d0149bef8ca63834cef'
+  const api_key = import.meta.env.VITE_WEATHER_API_KEY
 
-  function getWeather(lat, lon) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${KEY}&lang=kr&units=metric`)
-    .then(res => res.json())
-    .then(result => {
-      console.log(result);
-      setItem({
-        city: result.name,
-        temp: result.main.temp,
-        weather: result.weather[0].description
-      })}
-    ) 
+  async function getWeather(lat, lon) {
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}&units=metric`
+    const res = await fetch(url)
+    const result = await res.json()
+    setWeatherData({
+      city: result.name,
+      temp: result.main.temp,
+      weather: result.weather[0].description,
+    })
   }
-  
-  useEffect(()=> {
-    navigator.geolocation.getCurrentPosition( position => {
-      getWeather(position.coords.latitude, position.coords.longitude)   
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(position => {
+      getWeather(position.coords.latitude, position.coords.longitude)
     })
   }, [])
 
+  async function getCityWeather(e) {
+    e.preventDefault()
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&units=metric`
+    const res = await fetch(url)
+    const result = await res.json()
+    setWeatherData({
+      city: result.name,
+      temp: result.main.temp,
+      weather: result.weather[0].description,
+    })
+    setCity('')
+  }
 
   return (
-      <div className="weather_container">
-        <input type="text" placeholder="city?" />
-        <div className="weather">
-          <h3>{item.city}</h3>
-          <p>{item.temp} 도</p>
-          <p>{item.weather}</p>
-        </div>
+    <div className='weather_container'>
+      <form className='weather_search' onSubmit={getCityWeather}>
+        <input type='text' placeholder='Write your city...' value={city} onChange={e => setCity(e.target.value)} />
+      </form>
+      <div className='weather'>
+        <h3>{weatherData.city}</h3>
+        <p className='temp'>{weatherData.temp} °C</p>
+        <p>{weatherData.weather}</p>
       </div>
+    </div>
   )
 }
