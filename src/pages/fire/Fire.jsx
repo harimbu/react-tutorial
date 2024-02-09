@@ -1,12 +1,11 @@
-import FireInput from "./FireInput";
-import FireList from "./FiteList";
-import '../../css/todo.css'
+import FireInput from './FireInput'
+import FireList from './FiteList'
 
 export default function Fire() {
   return (
-    <div className="todos">
+    <div className='todos'>
       <h2>Firebase Todo</h2>
-      <FireInput /> 
+      <FireInput />
       <FireList />
     </div>
   )

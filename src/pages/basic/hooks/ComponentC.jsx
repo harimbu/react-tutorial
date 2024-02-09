@@ -1,11 +1,11 @@
 import ComponentD from './ComponentD'
 
-export default function ComponentC(props) {
+export default function ComponentC() {
   return (
     <div className='component_box'>
       <h1>ComponentC</h1>
-      <h3>{`Hello, ${props.user}`}</h3>
-      <ComponentD user={props.user} />
+      <h3>{`Hello, `}</h3>
+      <ComponentD />
     </div>
   )
 }

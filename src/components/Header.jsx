@@ -10,8 +10,8 @@ export default function Header() {
           <img src={photo} alt='' />
         </div>
         <div className='text'>
-          <p className='name'>탕웨이</p>
-          <p className='job'>actress, HK</p>
+          <p className='name'>React</p>
+          <p className='job'>javsscript library</p>
         </div>
       </div>
 
@@ -23,6 +23,9 @@ export default function Header() {
           <li>
             <a>Basic</a>
             <ul>
+              <li>
+                <Link to='/basic/card'>Card component</Link>
+              </li>
               <li>
                 <Link to='/hooks'>Hooks</Link>
               </li>

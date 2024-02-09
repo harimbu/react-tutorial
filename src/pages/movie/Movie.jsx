@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import '../../css/movie.css'
 
 export default function Movie() {
   const [movies, setMovies] = useState([])
@@ -17,14 +16,14 @@ export default function Movie() {
 
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/now_playing?language=ko&page=1', options)
-      .then((res) => res.json())
-      .then((res) => setMovies(res.results))
-      .catch((err) => console.error(err))
+      .then(res => res.json())
+      .then(res => setMovies(res.results))
+      .catch(err => console.error(err))
   }, [])
 
   return (
     <ul className='movie_list'>
-      {movies.map((movie) => (
+      {movies.map(movie => (
         <Link key={movie.id} to={'/movie/' + movie.id} state={movie}>
           <li>
             <div className='movie_thumbnail'>

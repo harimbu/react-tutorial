@@ -1,10 +1,12 @@
-import '../../../css/basic.css'
-import ComponentA from './ComponentA'
+import UseContextCompA from './UseContextCompA'
 
 export default function Hooks() {
   return (
     <>
-      <ComponentA />
+      <div className='hooks'>
+        <h1>useContext()</h1>
+        <UseContextCompA />
+      </div>
     </>
   )
 }

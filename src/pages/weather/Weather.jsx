@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import '../../css/weather.css'
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({})

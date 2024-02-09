@@ -12,6 +12,7 @@ import SupaWrite from './pages/supa/SupaWrite'
 import SupaEdit from './pages/supa/SupaEdit'
 import Hooks from './pages/basic/hooks/Hooks'
 import State from './pages/basic/state/State'
+import Card from './pages/basic/card/Card'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <main>
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/basic/card' element={<Card />} />
             <Route path='/hooks' element={<Hooks />} />
             <Route path='/state' element={<State />} />
             <Route path='/movie' element={<Movie />} />
