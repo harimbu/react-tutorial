@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import logo from '/react-icon.svg'
 import photo from '/photo.jpg'
+import { HiOutlineHome, HiOutlineViewList, HiOutlineFire } from 'react-icons/hi'
 
 export default function Header() {
   return (
@@ -18,45 +19,59 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <Link to='/'>Home</Link>
+            <div className='menu'>
+              <HiOutlineHome />
+              <Link to='/'>Home</Link>
+            </div>
           </li>
           <li>
-            <a>Basic</a>
+            <div className='menu'>
+              <HiOutlineViewList />
+              <span>Basic</span>
+            </div>
             <ul>
               <li>
                 <Link to='/basic/card'>Card component</Link>
               </li>
               <li>
-                <Link to='/hooks'>Hooks</Link>
+                <Link to='/basic/hooks'>Hooks</Link>
               </li>
               <li>
-                <Link to='/state'>state</Link>
+                <Link to='/basic/state'>state</Link>
               </li>
               <li>
-                <Link to='/usecontext'>useContext()</Link>
+                <Link to='/basic/usecontext'>useContext()</Link>
               </li>
               <li>
-                <Link to='/usecontext'>useContext()</Link>
+                <Link to='/basic/usecontext'>useContext()</Link>
               </li>
               <li>
-                <Link to='/usecontext'>useContext()</Link>
+                <Link to='/basic/usecontext'>useContext()</Link>
               </li>
             </ul>
           </li>
           <li>
-            <Link to='/movie'>Movies</Link>
-          </li>
-          <li>
-            <Link to='/todo'>Todo-list</Link>
-          </li>
-          <li>
-            <Link to='/fire'>Firebase Todo</Link>
-          </li>
-          <li>
-            <Link to='/supa'>Supabase Movie</Link>
-          </li>
-          <li>
-            <Link to='/weather'>Weather</Link>
+            <div className='menu'>
+              <HiOutlineFire />
+              <span>Tutorial</span>
+            </div>
+            <ul>
+              <li>
+                <Link to='/tutorial/movie'>Movies</Link>
+              </li>
+              <li>
+                <Link to='/tutorial/todo'>Todo-list</Link>
+              </li>
+              <li>
+                <Link to='/tutorial/fire'>Firebase Todo</Link>
+              </li>
+              <li>
+                <Link to='/tutorial/supa'>Supabase Movie</Link>
+              </li>
+              <li>
+                <Link to='/tutorial/weather'>Weather</Link>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>

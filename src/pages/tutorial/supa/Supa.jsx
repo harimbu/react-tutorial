@@ -1,4 +1,4 @@
-import supabase from '../../config/supabase'
+import supabase from '../../../config/supabase'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SupaItem from './SupaItem'

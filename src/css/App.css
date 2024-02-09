@@ -71,17 +71,24 @@ nav ul {
   flex-direction: column;
 }
 
-nav ul > li > a {
-  display: block;
-  padding: 8px;
-  font-weight: 500;
+nav ul > li .menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 20px 0 10px;
+}
+
+nav ul > li .menu svg {
+  font-size: 20px;
+  color: #7a7a7a;
 }
 
 nav ul ul li a {
   display: block;
   font-size: 14px;
-  padding: 6px 8px;
+  padding: 5px 0;
   font-weight: 300;
+  margin-left: 4px;
 }
 
 nav ul ul li a:hover {

@@ -1,6 +1,6 @@
-import { useRef } from "react"
-import { db } from "../../config/firebase"
-import { collection, serverTimestamp, doc, setDoc } from "firebase/firestore"; 
+import { useRef } from 'react'
+import { db } from '../../../config/firebase'
+import { collection, serverTimestamp, doc, setDoc } from 'firebase/firestore'
 
 export default function FireInput() {
   const contentRef = useRef()
@@ -13,16 +13,15 @@ export default function FireInput() {
       id: docRef.id,
       content: contentRef.current.value,
       completed: false,
-      date: serverTimestamp()
+      date: serverTimestamp(),
     }
     await setDoc(docRef, data)
     contentRef.current.value = ''
   }
 
-
   return (
-  <form onSubmit={handleSubmit}>
-    <input type="text" placeholder="Write a todo..." ref={contentRef} />
-  </form>
+    <form onSubmit={handleSubmit}>
+      <input type='text' placeholder='Write a todo...' ref={contentRef} />
+    </form>
   )
 }
