@@ -1,24 +1,27 @@
 import { createContext, useState } from 'react'
 import UseContextCompB from './UseContextCompB'
 
-export const UserContext = createContext()
+export const NameContext = createContext()
 
 export default function UseContextCompA() {
-  const [user, setUser] = useState('Alice')
+  const [name, setName] = useState('Alice')
 
-  function toggleUser() {
-    setUser(user === 'Alice' ? 'Picaso' : 'Alice')
+  function toggleName() {
+    setName(name === 'Alice' ? 'Picaso' : 'Alice')
   }
 
   return (
-    <div className='component_box'>
-      <h2>
-        Component A <button onClick={toggleUser}>button</button>
+    <div className='hooks'>
+      <h2 className='text-2xl'>
+        Component A
+        <button className='button' onClick={toggleName}>
+          button
+        </button>
       </h2>
-      <h3>Hello {user}</h3>
-      <UserContext.Provider value={user}>
+      <p>Hello, {name}</p>
+      <NameContext.Provider value={name}>
         <UseContextCompB />
-      </UserContext.Provider>
+      </NameContext.Provider>
     </div>
   )
 }

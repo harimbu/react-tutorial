@@ -1,13 +1,13 @@
 import { useContext } from 'react'
-import { UserContext } from './UseContextCompA'
+import { NameContext } from './UseContextCompA'
 
 export default function UseContextCompD() {
-  const user = useContext(UserContext)
+  const name = useContext(NameContext)
 
   return (
-    <div className='component_box'>
-      <h2>Component D</h2>
-      <h3>Hello {user}</h3>
+    <div className='hooks'>
+      <h2 className='text-2xl'>Component D</h2>
+      <p>Hello, {name}</p>
     </div>
   )
 }

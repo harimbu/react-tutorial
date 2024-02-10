@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sub_menu {
+  @apply block p-1 text-gray-600 hover:text-black hover:underline;
+}
+.page_title {
+  @apply text-4xl font-bold mb-6;
+}
+.hooks {
+  @apply border-4 p-6;
+}
+.button {
+  @apply p-2 m-2 text-sm bg-blue-500 hover:bg-blue-600 text-white rounded-md;
+}

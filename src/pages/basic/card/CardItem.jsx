@@ -1,11 +1,11 @@
 export default function CardItem(props) {
   return (
-    <div className='card'>
-      <div className='photo'>
-        <img src={props.person.photo} alt='' />
+    <div className='w-72 h-72 p-6 border rounded-xl flex flex-col items-center justify-around gap-2 shadow-md'>
+      <div className='w-36 h-36 rounded-full overflow-hidden'>
+        <img src={props.profile.img} alt='' />
       </div>
-      <h3>{props.person.name}</h3>
-      <p>{props.person.text}</p>
+      <h3 className='text-lg font-bold'>{props.profile.name}</h3>
+      <p className='text-xs text-gray-500 text-center px-3'>{props.profile.text}</p>
     </div>
   )
 }

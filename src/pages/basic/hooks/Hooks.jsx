@@ -3,10 +3,8 @@ import UseContextCompA from './UseContextCompA'
 export default function Hooks() {
   return (
     <>
-      <div className='hooks'>
-        <h1>useContext()</h1>
-        <UseContextCompA />
-      </div>
+      <h2 className='page_title'>useContext</h2>
+      <UseContextCompA />
     </>
   )
 }

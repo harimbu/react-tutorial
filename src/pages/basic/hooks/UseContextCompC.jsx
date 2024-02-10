@@ -2,9 +2,9 @@ import UseContextCompD from './UseContextCompD'
 
 export default function UseContextCompC() {
   return (
-    <div className='component_box'>
-      <h2>Component C</h2>
-      <h3>Hello {}</h3>
+    <div className='hooks'>
+      <h2 className='text-2xl'>Component C</h2>
+      <p>Hello, {}</p>
       <UseContextCompD />
     </div>
   )

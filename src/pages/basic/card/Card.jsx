@@ -2,19 +2,26 @@ import CardItem from './CardItem'
 import Photo from '/photo.jpg'
 
 export default function Card() {
-  const person = {
-    name: 'Tnag Wei 탕웨이',
+  const profile = {
+    name: 'Tnag Wei',
     text: '2007년 영화 《색, 계》에 주연으로 출연하여 명성을 얻었다. 그러나...',
-    photo: Photo,
+    img: Photo,
   }
 
   return (
     <>
-      <h2 className='basic_title'>Card Component</h2>
-      <CardItem person={person} />
-      <CardItem person={person} />
-      <CardItem person={person} />
-      <CardItem person={person} />
+      <h2 className='text-4xl font-bold mb-6'>Card Component</h2>
+      <div className='flex items-start flex-wrap gap-7'>
+        <CardItem profile={profile} />
+        <CardItem profile={profile} />
+        <CardItem profile={profile} />
+        <CardItem profile={profile} />
+        <CardItem profile={profile} />
+        <CardItem profile={profile} />
+        <CardItem profile={profile} />
+        <CardItem profile={profile} />
+        <CardItem profile={profile} />
+      </div>
     </>
   )
 }
