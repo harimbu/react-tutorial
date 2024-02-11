@@ -11,6 +11,12 @@
 .hooks {
   @apply border-4 p-6;
 }
+
+input[type='text'],
+textarea {
+  @apply w-full border border-gray-400 rounded-md p-3 mb-4 text-xl;
+}
+
 button {
   @apply p-2 m-2 text-sm bg-blue-500 hover:bg-blue-600 text-white rounded-md;
 }

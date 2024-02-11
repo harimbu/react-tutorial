@@ -1,6 +1,8 @@
 import dayjs from 'dayjs'
 import supabase from '../../../config/supabase'
 import { useEffect, useState } from 'react'
+import NoteItem from './NoteItem'
+import { Link } from 'react-router-dom'
 
 export default function Note() {
   const [notes, setNotes] = useState([])
@@ -25,25 +27,14 @@ export default function Note() {
       <h2 className='page_title'>Supabase Note</h2>
 
       <div className='mb-4'>
-        <button>노트작성</button>
+        <Link to='/tutorial/supabase/write'>
+          <button>노트작성</button>
+        </Link>
       </div>
 
       <ul className='flex flex-wrap gap-6'>
         {notes.map(note => (
-          <li
-            key={note.id}
-            className='border border-gray-300 p-6 rounded-lg w-96 min-w-80'
-          >
-            <h3 className='font-bold text-xl mb-4'>{note.title}</h3>
-            <p className='h-[100px] text-sm mb-3'>{note.content}</p>
-            <div className='flex items-center'>
-              <p className='text-xs text-gray-500 mr-auto'>
-                {dayjs(note.created_at).format('YYYY-MM-DD HH:mm:ss')}
-              </p>
-              <button>수정</button>
-              <button>삭제</button>
-            </div>
-          </li>
+          <NoteItem note={note} key={note.id} />
         ))}
       </ul>
     </>

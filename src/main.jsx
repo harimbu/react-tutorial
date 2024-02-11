@@ -13,6 +13,8 @@ import MovieDetail from './pages/tutorial/movie/MovieDetail.jsx'
 import Todo from './pages/tutorial/todo/Todo.jsx'
 import Firebase from './pages/tutorial/firebase/Todo.jsx'
 import Supabase from './pages/tutorial/supabase/Note.jsx'
+import NoteWrite from './pages/tutorial/supabase/NoteWrite.jsx'
+import NoteEdit from './pages/tutorial/supabase/NoteEdit.jsx'
 import Weather from './pages/tutorial/weather/Weather.jsx'
 
 const router = createBrowserRouter([
@@ -41,6 +43,8 @@ const router = createBrowserRouter([
           { path: 'todo', element: <Todo /> },
           { path: 'firebase', element: <Firebase /> },
           { path: 'supabase', element: <Supabase /> },
+          { path: 'supabase/write', element: <NoteWrite /> },
+          { path: 'supabase/edit', element: <NoteEdit /> },
           { path: 'weather', element: <Weather /> },
         ],
       },

@@ -21,12 +21,7 @@ export default function TodoInput() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        className='w-full border border-gray-400 rounded-md p-3 mb-4 text-xl'
-        type='text'
-        placeholder='Write a todo...'
-        ref={contentRef}
-      />
+      <input type='text' placeholder='Write a todo...' ref={contentRef} />
     </form>
   )
 }
