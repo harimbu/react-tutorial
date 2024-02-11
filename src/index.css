@@ -11,6 +11,6 @@
 .hooks {
   @apply border-4 p-6;
 }
-.button {
+button {
   @apply p-2 m-2 text-sm bg-blue-500 hover:bg-blue-600 text-white rounded-md;
 }

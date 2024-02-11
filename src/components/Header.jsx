@@ -11,9 +11,9 @@ export default function Header() {
   ]
   const tutorialMenu = [
     { id: 1, name: 'movie', to: '/tutorial/movie' },
-    { id: 2, name: 'todo-list', to: '/tutorial/todo' },
-    { id: 3, name: 'firebase-todo', to: '/tutorial/fire' },
-    { id: 4, name: 'supabase-memo', to: '/tutorial/supa' },
+    { id: 2, name: 'todo', to: '/tutorial/todo' },
+    { id: 3, name: 'firebase', to: '/tutorial/firebase' },
+    { id: 4, name: 'supabase', to: '/tutorial/supabase' },
     { id: 5, name: 'weather', to: '/tutorial/weather' },
   ]
 
@@ -69,7 +69,9 @@ export default function Header() {
 
       <div className='mt-auto flex items-center gap-1'>
         <img className='w-5' src={LOGO} alt='react logo' />
-        <span className='text-sm text-cyan-400'>react-tutorial {new Date().getFullYear()}</span>
+        <span className='text-sm text-cyan-400'>
+          react-tutorial {new Date().getFullYear()}
+        </span>
       </div>
     </header>
   )

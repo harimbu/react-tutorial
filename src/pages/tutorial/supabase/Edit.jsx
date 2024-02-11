@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import supabase from '../../../config/supabase'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-export default function SupaEdit() {
+export default function Edit() {
   const navigate = useNavigate()
   const movie = useLocation().state
 
@@ -30,9 +30,26 @@ export default function SupaEdit() {
   return (
     <div className='supa_form'>
       <div className='inputs'>
-        <input type='text' placeholder='title' ref={titleRef} defaultValue={movie.title} />
-        <textarea name='overview' cols='30' rows='10' placeholder='Write a overview' ref={overviewRef} defaultValue={movie.overview}></textarea>
-        <input type='number' placeholder='score' ref={scoreRef} defaultValue={movie.score} />
+        <input
+          type='text'
+          placeholder='title'
+          ref={titleRef}
+          defaultValue={movie.title}
+        />
+        <textarea
+          name='overview'
+          cols='30'
+          rows='10'
+          placeholder='Write a overview'
+          ref={overviewRef}
+          defaultValue={movie.overview}
+        ></textarea>
+        <input
+          type='number'
+          placeholder='score'
+          ref={scoreRef}
+          defaultValue={movie.score}
+        />
       </div>
       <div className='btns'>
         <button onClick={() => navigate(-1)}>취소</button>

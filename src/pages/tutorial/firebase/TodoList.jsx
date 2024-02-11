@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import FireItem from './FireItem'
+import FireItem from './TodoItem'
 import { db } from '../../../config/firebase'
 import { collection, query, onSnapshot } from 'firebase/firestore'
 
-export default function FireList() {
+export default function TodoList() {
   const [todos, setTodos] = useState([])
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function FireList() {
   }, [])
 
   return (
-    <ul className='todo_list'>
+    <ul>
       {todos.map(todo => (
         <FireItem key={todo.id} todo={todo} />
       ))}

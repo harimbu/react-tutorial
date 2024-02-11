@@ -11,8 +11,8 @@ import State from './pages/basic/state/State.jsx'
 import Movie from './pages/tutorial/movie/Movie.jsx'
 import MovieDetail from './pages/tutorial/movie/MovieDetail.jsx'
 import Todo from './pages/tutorial/todo/Todo.jsx'
-import Fire from './pages/tutorial/fire/Fire.jsx'
-import Supa from './pages/tutorial/supa/Supa.jsx'
+import Firebase from './pages/tutorial/firebase/Todo.jsx'
+import Supabase from './pages/tutorial/supabase/Note.jsx'
 import Weather from './pages/tutorial/weather/Weather.jsx'
 
 const router = createBrowserRouter([
@@ -39,8 +39,8 @@ const router = createBrowserRouter([
           { path: 'movie', element: <Movie /> },
           { path: 'movie/:id', element: <MovieDetail /> },
           { path: 'todo', element: <Todo /> },
-          { path: 'fire', element: <Fire /> },
-          { path: 'supa', element: <Supa /> },
+          { path: 'firebase', element: <Firebase /> },
+          { path: 'supabase', element: <Supabase /> },
           { path: 'weather', element: <Weather /> },
         ],
       },

@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import supabase from '../../../config/supabase'
 import { useNavigate } from 'react-router-dom'
 
-export default function SupaWrite() {
+export default function Write() {
   const location = useNavigate()
   const titleRef = useRef()
   const overviewRef = useRef()
@@ -26,7 +26,13 @@ export default function SupaWrite() {
     <div className='supa_form'>
       <div className='inputs'>
         <input type='text' placeholder='title' ref={titleRef} />
-        <textarea name='overview' cols='30' rows='10' placeholder='Write a overview' ref={overviewRef}></textarea>
+        <textarea
+          name='overview'
+          cols='30'
+          rows='10'
+          placeholder='Write a overview'
+          ref={overviewRef}
+        ></textarea>
         <input type='number' placeholder='score' ref={scoreRef} />
       </div>
       <div className='btns'>

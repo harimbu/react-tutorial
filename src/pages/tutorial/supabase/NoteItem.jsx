@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import supabase from '../../../config/supabase'
 
-export default function SupaItem({ movie, onRemove }) {
+export default function NoteItem({ movie, onRemove }) {
   async function removeMovie() {
     const { error } = await supabase.from('movies').delete().eq('id', movie.id)
 

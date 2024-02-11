@@ -3,12 +3,12 @@
     {
       "id": "1",
       "content": "HTML",
-      "completed": true
+      "completed": false
     },
     {
       "id": "2",
       "content": "CSS",
-      "completed": true
+      "completed": false
     },
     {
       "id": "3",
