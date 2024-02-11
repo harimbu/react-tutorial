@@ -16,7 +16,7 @@ export default function NoteItem({ note, updateLocalNote }) {
         <p className='text-xs text-gray-500 mr-auto'>
           {dayjs(note.created_at).format('YYYY-MM-DD HH:mm:ss')}
         </p>
-        <Link to='/tutorial/supabase/edit'>
+        <Link to='/tutorial/supabase/edit' state={note}>
           <button>수정</button>
         </Link>
         <button onClick={() => removeNote(note.id)}>삭제</button>

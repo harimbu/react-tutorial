@@ -1,4 +1,3 @@
-import dayjs from 'dayjs'
 import supabase from '../../../config/supabase'
 import { useEffect, useState } from 'react'
 import NoteItem from './NoteItem'
@@ -6,17 +5,16 @@ import { Link } from 'react-router-dom'
 
 export default function Note() {
   const [notes, setNotes] = useState([])
-  const [errorMsg, setErrorMsg] = useState('')
 
   useEffect(() => {
     async function getNotes() {
-      const { data, error } = await supabase.from('notes').select('*')
-      if (error) {
-        setErrorMsg('노트를 작성해 주세요')
-      }
-      if (data) {
-        setNotes(data)
-      }
+      const { data, error } = await supabase
+        .from('notes')
+        .select('*')
+        .order('id', { ascending: false })
+
+      if (error) console.log(error)
+      if (data) setNotes(data)
     }
 
     getNotes()

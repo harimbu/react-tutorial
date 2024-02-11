@@ -4,17 +4,17 @@ import PHOTO from '/photo.jpg'
 
 export default function Header() {
   const basicMenu = [
-    { id: 1, name: 'card Components', to: '/basic/card' },
-    { id: 2, name: 'hoooks', to: '/basic/hooks' },
+    { id: 1, name: 'card components', to: '/basic/card' },
+    { id: 2, name: 'hooks', to: '/basic/hooks' },
     { id: 3, name: 'state', to: '/basic/state' },
     { id: 4, name: 'useContext', to: '/basic/useContext' },
   ]
   const tutorialMenu = [
-    { id: 1, name: 'movie', to: '/tutorial/movie' },
-    { id: 2, name: 'todo', to: '/tutorial/todo' },
-    { id: 3, name: 'firebase', to: '/tutorial/firebase' },
-    { id: 4, name: 'supabase', to: '/tutorial/supabase' },
-    { id: 5, name: 'weather', to: '/tutorial/weather' },
+    { id: 1, name: 'weather', to: '/tutorial/weather' },
+    { id: 2, name: 'movie', to: '/tutorial/movie' },
+    { id: 3, name: 'todo', to: '/tutorial/todo' },
+    { id: 4, name: 'firebase', to: '/tutorial/firebase' },
+    { id: 5, name: 'supabase', to: '/tutorial/supabase' },
   ]
 
   return (
