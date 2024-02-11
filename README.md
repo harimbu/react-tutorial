@@ -1,6 +1,6 @@
 # React Tutorial
 
-- url : https://react-tutorial-37cf4.web.app {:target="\_blank"}
+- url : <a href='https://react-tutorial-37cf4.web.app' target='_blank'>react-tutorial-37cf4.web.app</a>
 
 ### TMDB 영화
 
