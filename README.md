@@ -1,6 +1,6 @@
 # React Tutorial
 
-- url : https://react-tutorial-37cf4.web.app
+- url : https://react-tutorial-37cf4.web.app {:target="\_blank"}
 
 ### TMDB 영화
 
