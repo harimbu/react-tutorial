@@ -22,6 +22,10 @@ export default function Note() {
     getNotes()
   }, [])
 
+  function updateLocalNote(id) {
+    setNotes(prev => prev.filter(p => p.id !== id))
+  }
+
   return (
     <>
       <h2 className='page_title'>Supabase Note</h2>
@@ -34,7 +38,11 @@ export default function Note() {
 
       <ul className='flex flex-wrap gap-6'>
         {notes.map(note => (
-          <NoteItem note={note} key={note.id} />
+          <NoteItem
+            note={note}
+            key={note.id}
+            updateLocalNote={updateLocalNote}
+          />
         ))}
       </ul>
     </>

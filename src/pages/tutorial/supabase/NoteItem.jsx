@@ -1,7 +1,13 @@
+import supabase from '../../../config/supabase'
 import dayjs from 'dayjs'
 import { Link } from 'react-router-dom'
 
-export default function NoteItem({ note }) {
+export default function NoteItem({ note, updateLocalNote }) {
+  async function removeNote(id) {
+    const { error } = await supabase.from('notes').delete().eq('id', id)
+    updateLocalNote(note.id)
+  }
+
   return (
     <li className='border border-gray-300 p-6 rounded-lg w-96 min-w-80'>
       <h3 className='font-bold text-xl mb-4'>{note.title}</h3>
@@ -13,7 +19,7 @@ export default function NoteItem({ note }) {
         <Link to='/tutorial/supabase/edit'>
           <button>수정</button>
         </Link>
-        <button>삭제</button>
+        <button onClick={() => removeNote(note.id)}>삭제</button>
       </div>
     </li>
   )

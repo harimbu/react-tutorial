@@ -1,3 +1,4 @@
+import supabase from '../../../config/supabase'
 import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -6,8 +7,16 @@ export default function NoteWrite() {
   const titleRef = useRef()
   const contentRef = useRef()
 
-  function writeNote() {
-    console.log('write')
+  async function writeNote() {
+    const { data, error } = await supabase.from('notes').insert([
+      {
+        title: titleRef.current.value,
+        content: contentRef.current.value,
+        mark: false,
+      },
+    ])
+
+    navigate(-1)
   }
 
   function cancleNote() {
