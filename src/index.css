@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+h2 {
+  @apply text-4xl font-bold mb-6;
+}
+
 .sub_menu {
   @apply block p-1 text-gray-600 hover:text-black hover:underline;
 }
-.page_title {
-  @apply text-4xl font-bold mb-6;
-}
+
 .hooks {
   @apply border-4 p-6;
 }

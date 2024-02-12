@@ -38,7 +38,7 @@ export default function Weather() {
 
   return (
     <div className='w-[360px]'>
-      <h2 className='page_title'>Weather</h2>
+      <h2>Weather</h2>
       <form className='weather_search' onSubmit={getCityWeather}>
         <input
           type='text'

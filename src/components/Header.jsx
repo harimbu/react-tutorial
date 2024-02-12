@@ -15,6 +15,7 @@ export default function Header() {
     { id: 3, name: 'todo', to: '/tutorial/todo' },
     { id: 4, name: 'firebase', to: '/tutorial/firebase' },
     { id: 5, name: 'supabase', to: '/tutorial/supabase' },
+    { id: 6, name: 'zustand', to: '/tutorial/zustand' },
   ]
 
   return (

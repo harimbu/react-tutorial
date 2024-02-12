@@ -10,7 +10,7 @@ export default function Card() {
 
   return (
     <>
-      <h2 className='text-4xl font-bold mb-6'>Card Component</h2>
+      <h2>Card Component</h2>
       <div className='flex items-start flex-wrap gap-7'>
         <CardItem profile={profile} />
         <CardItem profile={profile} />

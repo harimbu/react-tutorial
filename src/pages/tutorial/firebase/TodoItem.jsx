@@ -22,11 +22,11 @@ export default function FireItem({ todo }) {
   }
 
   async function editTodo() {
-    setModal(!modal)
     const docRef = doc(db, 'todos', todo.id)
     await updateDoc(docRef, {
       content: todoRef.current.value,
     })
+    setModal(!modal)
   }
 
   return (

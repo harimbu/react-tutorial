@@ -15,7 +15,10 @@ export default function Movie() {
   }
 
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/movie/now_playing?language=ko&page=1', options)
+    fetch(
+      'https://api.themoviedb.org/3/movie/now_playing?language=ko&page=1',
+      options
+    )
       .then(res => res.json())
       .then(res => setMovies(res.results))
       .catch(err => console.error(err))
@@ -23,17 +26,23 @@ export default function Movie() {
 
   return (
     <div>
-      <h2 className='page_title'>Movie</h2>
+      <h2>Movie</h2>
       <ul className='flex gap-4 flex-start flex-wrap'>
         {movies.map(movie => (
           <Link key={movie.id} to={`${movie.id}`} state={movie}>
             <li className='w-64 overflow-hidden'>
               <div className='h-96 bg-slate-400'>
-                <img className='w-full h-full object-cover' src={IMG_URL + movie.poster_path} alt='' />
+                <img
+                  className='w-full h-full object-cover'
+                  src={IMG_URL + movie.poster_path}
+                  alt=''
+                />
               </div>
               <div className='bg-gray-100 px-2 py-3'>
                 <p className='font-bold'>{movie.title}</p>
-                <p className='text-xs text-gray-500'>평점 : {movie.vote_average}</p>
+                <p className='text-xs text-gray-500'>
+                  평점 : {movie.vote_average}
+                </p>
               </div>
             </li>
           </Link>

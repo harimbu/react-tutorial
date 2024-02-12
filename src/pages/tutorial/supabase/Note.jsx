@@ -26,7 +26,7 @@ export default function Note() {
 
   return (
     <>
-      <h2 className='page_title'>Supabase Note</h2>
+      <h2>Supabase Note</h2>
 
       <div className='mb-4'>
         <Link to='/tutorial/supabase/write'>

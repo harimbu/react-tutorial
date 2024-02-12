@@ -16,6 +16,7 @@ import Supabase from './pages/tutorial/supabase/Note.jsx'
 import NoteWrite from './pages/tutorial/supabase/NoteWrite.jsx'
 import NoteEdit from './pages/tutorial/supabase/NoteEdit.jsx'
 import Weather from './pages/tutorial/weather/Weather.jsx'
+import Zustand from './pages/tutorial/zustand/Zustand.jsx'
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
           { path: 'supabase/write', element: <NoteWrite /> },
           { path: 'supabase/edit', element: <NoteEdit /> },
           { path: 'weather', element: <Weather /> },
+          { path: 'zustand', element: <Zustand /> },
         ],
       },
     ],
